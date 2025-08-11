@@ -7,11 +7,19 @@ datasource db {
   url      = "file:./dev.db"
 }
 
+enum UserStatus {
+  pending
+  active
+  blocked
+}
+
+
 model User {
   id          Int           @id @default(autoincrement())
   name        String
   email       String        @unique
   created_at  DateTime      @default(now())
+  status      UserStatus    @default(pending)
   groups      UserGroups[]
 
   @@map("users")

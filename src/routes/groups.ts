@@ -74,7 +74,11 @@ router.delete('/:groupId/users/:userId', async (req, res, next) => {
             });
         });
 
-        res.status(204).send();
+        res.status(200).json({
+      message: 'User unlinked from group.',
+      groupId,
+      userId
+    });
     } catch (err) {
         next(err);
     }

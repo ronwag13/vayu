@@ -43,5 +43,6 @@ model UserGroups {
   group  Group @relation(fields: [group_id], references: [id], onDelete: Cascade)
 
   @@id([user_id, group_id])
+  @@unique([user_id])
   @@map("user_groups")
 }

@@ -1,0 +1,8 @@
+node_modules
+
+.env
+previous
+/src/generated/prisma
+.idea
+prisma/migrations
+prisma/dev.db

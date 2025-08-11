@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import {prisma} from '../lib/prisma';
+import {prisma} from '../orm/prisma';
 import {paginationSchema} from '../utils/pagination';
 
 const router = Router();
